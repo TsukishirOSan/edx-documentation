@@ -19,7 +19,7 @@ You can create text input problems in the Simple Editor or in the Advanced Edito
 
 .. note:: Problems must include accessible labels. An accessible label generally 
  includes the text of the main question in your problem. To add an accessible
- label for a common problem, surround the text of the label with angle
+ label, you use the Simple Editor and surround the text of the label with angle
  brackets pointed toward the text (>>label text<<).
 
 ==============
