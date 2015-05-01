@@ -4,25 +4,29 @@
 Checkbox Problem
 ##################
 
-In checkbox problems, the learner selects one or more options from a list of
-possible answers. The learner must select all the options that apply to answer
-the problem correctly. Each checkbox problem must have at least one correct
-answer.
+In checkbox problems, learners select one or more options from a list of
+possible answers. To answer the problem correctly, a learner must select all
+of the options that apply. Each checkbox problem must have at least one
+correct answer.
 
 .. image:: ../../../shared/building_and_running_chapters/Images/CheckboxExample.png
  :alt: A checkbox problem with four options, 2 of which are required for the
      correct answer
 
+For the checkbox problems in your course, you can use edX Insights to review
+aggregated learner performance data and examine submitted answers. For more
+information, see `Using edX Insights`_.
+
 ****************************
 Creating a Checkbox Problem
 ****************************
 
-You can create checkbox problems in the Simple Editor or in the Advanced Editor.
-
-.. note:: Problems must include accessible labels. An accessible label generally 
- includes the text of the main question in your problem. To add an accessible
- label, you use the Simple Editor and surround the text of the label with angle
- brackets pointed toward the text (>>label text<<).
+You can create checkbox problems in the Simple Editor or in the Advanced
+Editor. You can set up a problem in the Simple Editor, and then switch to the
+Advanced Editor to add more configuration options in XML. However, you cannot
+switch back to the Simple Editor from the Advanced Editor. Therefore, you
+might want to format the problem as completely as possible before you begin to
+use the Advanced Editor.
 
 .. _Use the Simple Editor to Create a Checkbox Problem:
 
@@ -30,16 +34,18 @@ You can create checkbox problems in the Simple Editor or in the Advanced Editor.
 Use the Simple Editor to Create a Checkbox Problem
 ======================================================
 
-To use the Simple Editor to create a checkbox problem, follow these steps.
+To use the :ref:`Simple Editor<Simple Editor>` to create a checkbox problem,
+follow these steps.
 
 #. In the unit where you want to create the problem, under **Add New
    Component** select **Problem**.
-#. From the list of **Common Problem Types**, select **Checkboxes**.
-#. Select **Edit**. The Simple Editor opens with an example problem. In the
-   editor, you replace the sample problem text with your own text.
-#. Determine the text that expresses the question you want learners to answer,
-   and then use two sets of angle brackets (>><<) to surround that text. This
-   question text is the accessible label for the problem.
+#. From the list of **Common Problem Types**, select **Checkboxes**. Studio
+   adds an example checkbox problem to the unit.
+#. Select **Edit**. The Simple Editor opens. 
+#. Replace the sample problem text with your own text.
+#. Determine the text that describes the question you want learners to answer,
+   and surround that text with two pairs of angle brackets (``>>question<<``).
+   This question text is the accessible label for the problem.
 #. Edit your text to place each answer option on a separate line.
 #. Select your set of answer options, and then select **Checkboxes** from the
    toolbar. A pair of brackets appears next to each answer choice.
@@ -49,8 +55,8 @@ To use the Simple Editor to create a checkbox problem, follow these steps.
    and after the explanation text.
 #. Select **Settings** and provide an identifying **Display Name** for the
    problem.
-#. Specify options for the problem. For more information, see :ref:`Problem
-   Settings`.
+#. Define additional settings for the problem. For more information, see
+   :ref:`Problem Settings`.
 #. Select **Save**.
 
 For the example problem illustrated above, the following text displays in the
@@ -77,17 +83,18 @@ problem component.
 Use the Advanced Editor to Create a Checkbox Problem 
 ========================================================================
 
-To use the Advanced Editor to create a checkbox problem, follow these steps.
+To use the :ref:`Advanced Editor<Advanced Editor>` to create a checkbox
+problem, follow these steps.
 
-#. Follow steps 1-3 for creating the problem in the :ref:`Simple Editor<Use
+#. Follow the steps for creating the problem in the :ref:`Simple Editor<Use
    the Simple Editor to Create a Checkbox Problem>`.
-#. Select **Advanced Editor**, and then replace the existing XML with your own
-   marked up text. An example follows.
+#. Select **Advanced Editor**, and then edit the XML to add the tags and
+   attributes you want. An example follows.
 
 .. code-block:: xml
 
   <problem>
-    <p>Learning about the benefits of preventative healthcare can be particularly difficult. Check all of the reasons below why this may be the case.</p>
+  <p>Learning about the benefits of preventative healthcare can be particularly difficult. Check all of the reasons below why this may be the case.</p>
 
   <choiceresponse>
     <checkboxgroup label="Check all of the reasons below why this may be the case">
@@ -119,7 +126,7 @@ Template
 .. code-block:: xml
 
   <problem>
-    <p>Question text</p>
+  <p>Question text</p>
 
   <choiceresponse>
 
@@ -197,3 +204,6 @@ Designates an answer option.
   Children
   
   (none)
+
+
+.. _Using edX Insights: http://edx.readthedocs.org/projects/edx-insights/en/latest/

@@ -6,31 +6,36 @@ Math Expression Input Problems
 
 In math expression input problems, learners enter text that represents a
 mathematical expression. The text is converted to a symbolic expression that
-appears below the entry. Unlike numerical input problems, which only allow
-integers and a few select constants, math expression problems can include
-unknown variables and more complicated symbolic expressions.
+appears below the response field. Unlike numerical input problems, which only
+allow integers and a few select constants, math expression input problems can
+include unknown variables and more complicated symbolic expressions.
 
 .. image:: ../../../shared/building_and_running_chapters/Images/MathExpressionInputExample.png
  :alt: A problem requesting the symbolic expression and numerical evaluation
      of N(x) for a sleeved cylinder
 
-For more information about characters that learners can enter, see `Math
-Response Formatting for Students`_.
+For more information about how learners enter expressions, see `Math Response
+Formatting for Students`_.
 
-The grader uses a numerical sampling to determine whether the learner's
-response matches the instructor-provided math expression, to a specified
-numerical tolerance. The instructor must specify the allowed variables in the
-expression as well as the range of values for each variable.
+For the math expression input problems in your course, you can use edX
+Insights to review aggregated learner performance data and examine
+submitted answers. For more information, see `Using edX Insights`_.
 
-.. note:: Math expression input problems cannot currently include negative 
- numbers raised to fractional powers, such as (-1)^(1/2). Math expression
- input problems can include complex numbers raised to fractional powers, or
- positive non-complex numbers raised to fractional powers.
+For math expression input problems, the grader uses numerical sampling to
+determine whether the learner's response matches the instructor-provided math
+expression, to a specified numerical tolerance. The instructor must specify
+the allowed variables in the expression as well as the range of values for
+each variable.
 
 When you create a math expression input problem in Studio, you use `MathJax
 <http://www.mathjax.org>`_ to change your plain text into "beautiful math."
 For more information about how to use MathJax in Studio, see :ref:`MathJax in
 Studio`.
+
+.. note:: Math expression input problems currently cannot include negative 
+ numbers raised to fractional powers, such as (-1)^(1/2). Math expression
+ input problems can include complex numbers raised to fractional powers, or
+ positive non-complex numbers raised to fractional powers.
 
 ************************************************
 Create a Math Expression Input Problem
@@ -41,17 +46,19 @@ To create a math expression input problem, follow these steps.
 #. In the unit where you want to create the problem, under **Add New
    Component** select **Problem**.
 #. Select **Advanced**.
-#. Select **Math Expression Input**.
-#. Select **Edit**. The Advanced Editor opens with an example problem. In the
-   editor, you replace the sample XML with your own marked up text. To
-   practice, you can use the sample problem that follows.
+#. Select **Math Expression Input**. Studio adds an example math expression
+   input problem to the unit.
+#. Select **Edit**. The Advanced Editor opens. 
+
+#. Replace the sample problem XML with your own marked up text. To
+   practice, you can use the example problem that follows.
 #. Select **Settings** and provide an identifying **Display Name** for the
    problem.
-#. Specify options for the problem. For more information, see :ref:`Problem
-   Settings`.
+#. Define additional settings for the problem. For more information, see
+   :ref:`Problem Settings`.
 #. Select **Save**.
 
-**Sample Problem Code**
+**Example Problem Code**
 
 .. code-block:: xml
 
@@ -168,7 +175,7 @@ Specifies that the problem is a math expression input problem. The
     ``"variables@lower_bounds:upper_bounds#num_samples"``
 
     For example, a ``<formularesponse>`` tag that includes the ``samples``
-    attribute may look like either of the following.
+    attribute might look like either of the following.
 
     ``<formularesponse samples="x,n@1,2:3,4#10">``
 
@@ -180,7 +187,7 @@ Specifies that the problem is a math expression input problem. The
 
 **Tag:** ``<formulaequationinput />``
 
-Creates a response field where a learner types an answer to the problem in
+Creates a response field where a learner enters an answer to the problem in
 plain text, as well as a second field below the response field where the
 learner sees a typeset version of the plain text. The parser that renders the
 learner's plain text into typeset math is the same parser that evaluates the
@@ -229,3 +236,5 @@ approximate a test for equality.
   (none)
 
 .. _Math Response Formatting for Students: http://edx-guide-for-students.readthedocs.org/en/latest/SFD_mathformatting.html
+
+.. _Using edX Insights: http://edx.readthedocs.org/projects/edx-insights/en/latest/

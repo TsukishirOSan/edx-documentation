@@ -13,12 +13,8 @@ response field.
  :alt: A problem with 3 questions, the learner gave 2 correct and 1
      incorrect answer
 
-You can specify a margin of error, or tolerance, for the answers to these
-problems so that learners' responses do not have to be exact. You can 
-specify a correct answer explicitly or use a Python script.
-
 Responses for numerical input problems can include integers, fractions, and
-constants such as pi and g. Responses can also include text representing
+constants such as pi and *g*. Responses can also include text representing
 common functions, such as square root (sqrt) and log base 2 (log2), as well as
 trigonometric functions and their inverses, such as sine (sin) and arcsine
 (arcsin). For these functions, learners enter text that is converted into
@@ -29,15 +25,23 @@ learner and the numerical expression that results.
  :alt: A learner typed n*x^(n-1) to enter the symbolic expression n times x to
      the n minus 1 power
 
-For more information about characters that learners can enter, see `Math
-Response Formatting for Students`_.
+For more information about how learners enter expressions, see `Math Response
+Formatting for Students`_.
+
+You can specify a margin of error, or tolerance, for the answers to these
+problems so that learners' responses do not have to be exact. You can 
+specify a correct answer explicitly or use a Python script.
+
+For the numerical input problems in your course, you can use edX Insights to
+review aggregated learner performance data and examine submitted answers. For
+more information, see `Using edX Insights`_.
 
 ***********************************
 Creating a Numerical Input Problem 
 ***********************************
 
 You can create numerical problems in the Simple Editor or in the Advanced
-Editor regardless of the answer to the problem. 
+Editor. 
 
 * If the text of your problem does not include any italics, bold formatting,
   or special characters, you can create the problem in the Simple Editor. 
@@ -58,20 +62,23 @@ For more information about including a Python script in your problem, see
 Use the Simple Editor to Create a Numerical Input Problem
 ========================================================================
 
-To use the Simple Editor to create a numerical input problem, follow these steps.
+To the :ref:`Simple Editor<Simple Editor>` to create a numerical input
+problem, follow these steps.
 
 #. In the unit where you want to create the problem, under **Add New
    Component** select **Problem**.
 #. From the list of **Common Problem Types**, select **Numerical Input**.
-#. Select **Edit**. The Simple Editor opens with an example problem. In the
-   editor, you replace the sample problem text with your own text.
-#. Determine the text that expresses the question you want learners to answer,
-   and then use two sets of angle brackets (>><<) to surround that text. This
+   Studio adds an example dropdown problem to the unit.
+#. Select **Edit**. The Simple Editor opens.
+#. Replace the sample problem text with your own text.
+#. Determine the text that describes the question you want learners to answer,
+   and surround that text with two pairs of angle brackets (``>>question<<``).
+   This question text is the accessible label for the problem.
    question text is the accessible label for the problem.
 #. To identify the problem's answer, select the answer text and then select
-   **Numerical Input** in the editing toolbar. An equals sign appears
+   **Numerical Input** from the toolbar. An equals sign appears
    next to the answer.
-#. Optionally, specify a margin of error, or tolerance. You can specify a
+7. Optionally, specify a margin of error, or tolerance. You can specify a
    percentage, number, or range.
 
    * To specify a percentage on either side of the correct answer, after the
@@ -83,7 +90,7 @@ To use the Simple Editor to create a numerical input problem, follow these steps
      **+-5**.
 
    * To specify a range, you provide the starting and ending values separated
-     by a comma and then surround the rangge with brackets [] or parentheses
+     by a comma and then surround the range with brackets [] or parentheses
      (). A bracket includes the number next to it in the range, and a
      parenthesis excludes the number from the range. For example, if you specify
      **[5, 8)**, correct answers can be 5, 6, and 7, but not 8. Likewise, if
@@ -94,8 +101,8 @@ To use the Simple Editor to create a numerical input problem, follow these steps
    and after the explanation text.
 #. Select **Settings** and provide an identifying **Display Name** for the
    problem.
-#. Specify options for the problem. For more information, see :ref:`Problem
-   Settings`.
+#. Define additional settings for the problem. For more information, see
+   :ref:`Problem Settings`.
 #. Select **Save**.
 
 For the first example problem illustrated above, the text in the problem
@@ -117,10 +124,10 @@ Use the Advanced Editor to Create a Numerical Input Problem
 
 For a more complex problem, such as the one that follows, you use the Advanced Editor.
 
-#. Follow steps 1-3 for creating the problem in the :ref:`Simple Editor<Use
+#. Follow the steps for creating the problem in the :ref:`Simple Editor<Use
    the Simple Editor to Create a Numerical Input Problem>`. 
-#. Select **Advanced Editor**, and then replace the existing XML with your own
-   marked up text. An example follows.
+#. Select **Advanced Editor**, and then edit the XML to add the tags and
+   attributes you want. An example follows.
 
 **Problem Code**:
 
@@ -142,7 +149,7 @@ For a more complex problem, such as the one that follows, you use the Advanced E
     </numericalresponse>
   </p>
 
-  <!-- The following uses Python script spacing. Make sure it is not indented when you add it to the problem component. -->
+  <!-- The following lines use Python script spacing. Make sure it is not indented when you add it to the problem component. -->
   <script type="loncapa/python">
   computed_response = math.sqrt(math.fsum([math.pow(math.pi,2), math.pow(math.e,2)]))
   </script>
@@ -180,7 +187,8 @@ Numerical Input Problem XML
 Templates
 =========
 
-The following templates represent problems with and without a decimal or percentage tolerance.
+The following templates represent problems with and without a decimal or
+percentage tolerance.
 
 Problem with No Tolerance
 ***************************
@@ -244,14 +252,14 @@ Problem with a Percentage Tolerance
   </solution>
   </problem>
 
-Answer Created with a Script
+Answer Created Using a Script
 ************************************
 
 .. code-block:: xml
 
   <problem>
 
-  <!-- The following uses Python script spacing. Make sure it is not indented when you add it to the problem component. -->
+  <!-- The following lines use Python script spacing. Make sure it is not indented when you add it to the problem component. -->
   <script type="loncapa/python">
   computed_response = math.sqrt(math.fsum([math.pow(math.pi,2), math.pow(math.e,2)]))
   </script>
@@ -322,7 +330,7 @@ the ``<numericalresponse>`` tag does not allow unspecified variables.
 
 **Tag:** ``<formulaequationinput>``
 
-Creates a response field in the LMS where students enter a response.
+Creates a response field in the LMS where learners enter a response.
 
   Attributes
 
@@ -388,3 +396,6 @@ XML.
   (none)
 
 .. _Math Response Formatting for Students: http://edx-guide-for-students.readthedocs.org/en/latest/SFD_mathformatting.html
+
+
+.. _Using edX Insights: http://edx.readthedocs.org/projects/edx-insights/en/latest/
