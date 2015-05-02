@@ -147,7 +147,7 @@ editing problem components: the Simple Editor and the Advanced Editor.
 *  The Simple Editor allows you to edit problems visually, without
    having to work with XML. 
 
-*  The Advanced Editor converts the problem to edX’s XML standard and
+*  The Advanced Editor converts the problem to edX's XML standard and
    allows you to edit that XML directly.
 
 You can switch at any time from the Simple Editor to the Advanced Editor by

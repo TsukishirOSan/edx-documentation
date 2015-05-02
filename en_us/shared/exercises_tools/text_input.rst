@@ -81,10 +81,10 @@ problem component.
 
 
 ========================================================================
-Use the Advanced Editor to Create a Text Input Problem 
+Use the Advanced Editor to Edit a Text Input Problem 
 ========================================================================
 
-To use the Advanced Editor to create a text input problem, follow these steps.
+To use the Advanced Editor to edit a text input problem, follow these steps.
 
 #. Follow the steps for creating the problem in the :ref:`Simple Editor<Use
    the Simple Editor to Create a Text Input Problem>`. 

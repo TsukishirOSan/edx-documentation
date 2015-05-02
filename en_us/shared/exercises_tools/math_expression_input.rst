@@ -49,7 +49,6 @@ To create a math expression input problem, follow these steps.
 #. Select **Math Expression Input**. Studio adds an example math expression
    input problem to the unit.
 #. Select **Edit**. The Advanced Editor opens. 
-
 #. Replace the sample problem XML with your own marked up text. To
    practice, you can use the example problem that follows.
 #. Select **Settings** and provide an identifying **Display Name** for the

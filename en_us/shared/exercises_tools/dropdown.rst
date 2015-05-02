@@ -78,10 +78,10 @@ problem component.
     [[(Nominal), Discrete, Continuous]]
 
 ========================================================================
-Use the Advanced Editor to Create a Dropdown Problem 
+Use the Advanced Editor to Edit a Dropdown Problem 
 ========================================================================
 
-To use the Advanced Editor to create a dropdown problem, follow these steps.
+To use the Advanced Editor to edit a dropdown problem, follow these steps.
 
 #. Follow the steps for creating the problem in the :ref:`Simple Editor<Use
    the Simple Editor to Create a Dropdown Problem>`. 

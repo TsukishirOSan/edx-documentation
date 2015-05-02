@@ -122,7 +122,8 @@ component appears as follows.
 Use the Advanced Editor to Create a Numerical Input Problem 
 ========================================================================
 
-For a more complex problem, such as the one that follows, you use the Advanced Editor.
+For a more complex problem, such as the one that follows, you use the Advanced
+Editor.
 
 #. Follow the steps for creating the problem in the :ref:`Simple Editor<Use
    the Simple Editor to Create a Numerical Input Problem>`. 

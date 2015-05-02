@@ -80,10 +80,10 @@ problem component.
 
 
 ========================================================================
-Use the Advanced Editor to Create a Checkbox Problem 
+Use the Advanced Editor to Edit a Checkbox Problem 
 ========================================================================
 
-To use the :ref:`Advanced Editor<Advanced Editor>` to create a checkbox
+To use the :ref:`Advanced Editor<Advanced Editor>` to edit a checkbox
 problem, follow these steps.
 
 #. Follow the steps for creating the problem in the :ref:`Simple Editor<Use

@@ -92,10 +92,10 @@ problem component.
 
 
 ========================================================================
-Use the Advanced Editor to Create a Multiple Choice Problem 
+Use the Advanced Editor to Edit a Multiple Choice Problem 
 ========================================================================
 
-To use the :ref:`Advanced Editor<Advanced Editor>` to create a multiple choice
+To use the :ref:`Advanced Editor<Advanced Editor>` to edit a multiple choice
 problem, follow these steps.
 
 #. Follow the steps for creating the problem in the :ref:`Simple Editor<Use
